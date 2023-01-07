@@ -1,0 +1,57 @@
+<game>
+    <!-- title: 視窗標題, width: 視窗寬度, height: 視窗高度, padding: 邊框粗細, btn: 按鈕位置與長寬-->
+    <frame title="俄羅斯方塊" width="1200" height="750" padding="6" startBtnX="860" startBtnY="70" settingBtnX="1025" settingBtnY="70" btnW="135" btnH="40">
+        <!-- className: 類別名稱, x: 起始x座標, y: 起始y座標, w: 窗體寬度, h: 窗體高度 -->
+        <layer className="ui.LayerBackground" x="0" y="0" w="1200" h="750"></layer>
+        <layer className="ui.LayerRank" x="50" y="50" w="300" h="230"></layer>
+        <layer className="ui.LayerDisk" x="50" y="300" w="300" h="310"></layer>
+        <layer className="ui.LayerGame" x="460" y="50" w="332" h="587"></layer>
+        <layer className="ui.LayerButton" x="850" y="50" w="320" h="76"></layer>
+        <layer className="ui.LayerNext" x="850" y="140" w="150" h="150"></layer>
+        <layer className="ui.LayerNextXt" x="1020" y="140" w="150" h="150"></layer>
+        <layer className="ui.LayerPoint" x="850" y="310" w="320" h="200"></layer>
+        <layer className="ui.LayerAbout" x="850" y="550" w="320" h="87"></layer>
+    </frame>
+    <!-- maxbit: 分數最大位數, maxrow: 排行榜做多筆數, levelup: 升等經驗值 -->
+    <system maxbit="5" maxrow="5" levelup="300" MIN_X="0" MIN_Y="0" MAX_X="9" MAX_Y="17">
+        <!-- rotate: 旋轉 -->
+        <rect rotate="true">
+            <!-- x: 方塊x座標, y: 方塊y座標, 第一個點為方塊中心點-->
+            <point x="4" y="0"></point><point x="3" y="0"></point><point x="5" y="0"></point><point x="6" y="0"></point>
+        </rect>
+        <rect rotate="true">
+            <point x="4" y="0"></point><point x="3" y="0"></point><point x="5" y="0"></point><point x="4" y="1"></point>
+        </rect>
+        <rect rotate="true">
+            <point x="4" y="0"></point><point x="3" y="0"></point><point x="5" y="0"></point><point x="3" y="1"></point>
+        </rect>
+        <rect rotate="true">
+            <point x="4" y="0"></point><point x="5" y="0"></point><point x="3" y="1"></point><point x="4" y="1"></point>
+        </rect>
+        <rect rotate="false">
+            <point x="4" y="0"></point><point x="5" y="0"></point><point x="4" y="1"></point><point x="5" y="1"></point>
+        </rect>
+        <rect rotate="true">
+            <point x="4" y="0"></point><point x="3" y="0"></point><point x="5" y="0"></point><point x="5" y="1"></point>
+        </rect>
+        <rect rotate="true">
+            <point x="4" y="0"></point><point x="3" y="0"></point><point x="4" y="1"></point><point x="5" y="1"></point>
+        </rect>
+        <!-- rm: 消行數, point: 獲得分數 -->
+        <plusPoint rm="1" point="10"></plusPoint>
+        <plusPoint rm="2" point="30"></plusPoint>
+        <plusPoint rm="3" point="50"></plusPoint>
+        <plusPoint rm="4" point="80"></plusPoint>
+        <!-- level: 等級, rank: 段位名稱 -->
+        <rankTitle level="1" rank="1"></rankTitle>
+        <rankTitle level="2" rank="2"></rankTitle>
+        <rankTitle level="3" rank="3"></rankTitle>
+        <rankTitle level="4" rank="4"></rankTitle>
+        <rankTitle level="5" rank="5"></rankTitle>
+        <rankTitle level="6" rank="6"></rankTitle>
+        <rankTitle level="7" rank="7"></rankTitle>
+        <rankTitle level="8" rank="8"></rankTitle>
+        <rankTitle level="9" rank="9"></rankTitle>
+    </system>
+    <data></data>
+</game>
